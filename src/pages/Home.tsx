@@ -1,12 +1,4 @@
 import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 import ProfileCard from "@/components/ProfileCard"
 import StarBorder from "@/components/StarBorder"
 import GlassNav from "@/components/GlassNav"
