@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 345 30% 8%;
+    --foreground: 0 0% 95%;
+    --card: 345 25% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 345 30% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 345 75% 45%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 345 20% 18%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 345 15% 20%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 345 50% 35%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 345 20% 18%;
+    --input: 345 20% 18%;
+    --ring: 345 75% 45%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 345 30% 8%;
+    --foreground: 0 0% 95%;
+    --card: 345 25% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 345 30% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 345 75% 45%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 345 20% 18%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 345 15% 20%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 345 50% 35%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 345 20% 18%;
+    --input: 345 20% 18%;
+    --ring: 345 75% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply text-foreground;
+    background: linear-gradient(135deg, #1a0a0f 0%, #0a0506 50%, #1a0a0f 100%);
+    background-attachment: fixed;
+    position: relative;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  #root {
+    position: relative;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,35 @@
+.glass-header {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-left: 2rem;
+
+  /* Reduced glassmorphism effect */
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+
+  /* Border and shadow */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 100px;
+
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glass-header h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .glass-header {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .glass-header h2 {
+    font-size: 1.25rem;
+  }
+}
