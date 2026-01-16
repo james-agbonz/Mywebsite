@@ -48,7 +48,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto">
           {/* Navigation at the top */}
           <div className="flex items-center justify-between mb-12 pt-4">
-            <a href="/" className="text-2xl bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer">
+            <a href="/Mywebsite/" className="text-2xl bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer">
               <span className="font-bold">James</span> Agbonhese
             </a>
             <GlassNav

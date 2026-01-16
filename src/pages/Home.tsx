@@ -35,7 +35,7 @@ export default function Home() {
         <section className="mb-24 relative min-h-[80vh] flex flex-col">
           {/* Navigation at the top */}
           <div className="flex items-center justify-between mb-12 pt-4">
-            <a href="/" className="text-2xl bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer">
+            <a href="/Mywebsite/" className="text-2xl bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer">
               <span className="font-bold">James</span> Agbonhese
             </a>
             <GlassNav
@@ -65,7 +65,7 @@ export default function Home() {
           {/* Right: Text Content */}
           <div className="flex-1 text-left">
             <h1 className="text-lg mb-6 bg-gradient-to-r from-rose-400 via-red-500 to-rose-600 bg-clip-text text-transparent">
-              Data and Automations | Agentic AI • MLOps • DevOps
+              Data and Automations | Agentic AI • MLOps • Distributed Systems
             </h1>
 
             <div className="space-y-6 text-base text-muted-foreground leading-relaxed">
