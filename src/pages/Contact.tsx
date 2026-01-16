@@ -67,15 +67,15 @@ export default function Contact() {
             <div className="cv-download-bar mb-12">
               <div className="cv-content">
                 <div className="cv-info">
-                  <h3 className="cv-title">Download My Resume</h3>
+                  <h3 className="cv-title">View My Resume</h3>
                 </div>
                 <button
                   className="cv-download-button"
                   onClick={() => window.open('/path/to/your/cv.pdf', '_blank')}
-                  aria-label="Download Resume"
+                  aria-label="View Resume"
                 >
                   <Download size={20} className="cv-icon" />
-                  <span>Download</span>
+                  <span>View</span>
                 </button>
               </div>
             </div>
