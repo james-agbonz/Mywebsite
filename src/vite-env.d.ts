@@ -27,3 +27,6 @@ declare module '@/components/ProfileCard'
 declare module '@/components/StarBorder'
 declare module '@/components/ChromaGrid'
 declare module '@/components/GlassNav'
+
+declare module './components/Dock'
+declare module './GooeyNav'
