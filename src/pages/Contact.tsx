@@ -71,7 +71,7 @@ export default function Contact() {
                 aria-label="View Resume"
               >
                 <Download size={24} className="cv-icon" />
-                <span>...my resume</span>
+                <span>View my resume</span>
               </button>
             </div>
 
