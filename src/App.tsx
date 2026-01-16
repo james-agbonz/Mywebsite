@@ -50,7 +50,7 @@ function AppContent() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      {location.pathname !== '/contact' && <Dock items={dockItems} />}
+      {location.pathname !== '/contact' && location.pathname !== '/projects' && <Dock items={dockItems} />}
     </div>
   )
 }

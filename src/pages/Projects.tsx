@@ -1,4 +1,5 @@
 import ChromaGrid from "@/components/ChromaGrid"
+import GlassNav from "@/components/GlassNav"
 import Particles from "@/components/Particles"
 import xaiImage from "@/assets/images/summary_GOOD.png"
 import nexosphereImage from "@/assets/images/nexosphere.png"
@@ -7,6 +8,12 @@ import cdnImage from "@/assets/images/cdn-la-gi.jpg"
 import './Projects.css'
 
 export default function Projects() {
+  const navItems = [
+    { label: 'About', href: '/' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Contact', href: '/contact' }
+  ]
+
   const researchProjects = [
     {
       image: xaiImage,
@@ -96,6 +103,10 @@ export default function Projects() {
           <a href="/" className="text-2xl bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer">
             <span className="font-bold">James</span> Agbonhese
           </a>
+          <GlassNav
+            items={navItems}
+            initialActiveIndex={1}
+          />
         </div>
 
         {/* Research Section */}
