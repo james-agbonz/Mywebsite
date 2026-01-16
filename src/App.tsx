@@ -57,7 +57,7 @@ function AppContent() {
 
 function App() {
   return (
-    <Router basename="/MYportfolio.github.io">
+    <Router>
       <AppContent />
     </Router>
   )
