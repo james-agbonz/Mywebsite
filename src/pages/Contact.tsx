@@ -65,19 +65,14 @@ export default function Contact() {
 
             {/* Glassmorphic CV Download Bar */}
             <div className="cv-download-bar mb-12">
-              <div className="cv-content">
-                <div className="cv-info">
-                  <h3 className="cv-title">View My Resume</h3>
-                </div>
-                <button
-                  className="cv-download-button"
-                  onClick={() => window.open('/path/to/your/cv.pdf', '_blank')}
-                  aria-label="View Resume"
-                >
-                  <Download size={20} className="cv-icon" />
-                  <span>View</span>
-                </button>
-              </div>
+              <button
+                className="cv-download-button-full"
+                onClick={() => window.open('/path/to/your/cv.pdf', '_blank')}
+                aria-label="View Resume"
+              >
+                <Download size={24} className="cv-icon" />
+                <span>...my resume</span>
+              </button>
             </div>
 
             {/* Contact Icons */}
@@ -104,7 +99,15 @@ export default function Contact() {
         .cv-download-bar {
           width: 100%;
           max-width: 400px;
-          padding: 0.75rem 1rem;
+        }
+
+        .cv-download-button-full {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.75rem;
+          width: 100%;
+          padding: 1rem 2rem;
 
           /* Glassmorphism effect */
           background: rgba(255, 255, 255, 0.05);
@@ -118,76 +121,25 @@ export default function Contact() {
             0 8px 32px rgba(0, 0, 0, 0.3),
             inset 0 1px 0 rgba(255, 255, 255, 0.1);
 
+          color: rgba(255, 255, 255, 0.95);
+          font-size: 1.125rem;
+          font-weight: 600;
+
+          cursor: pointer;
           transition: all 0.3s ease;
         }
 
-        .cv-download-bar:hover {
+        .cv-download-button-full:hover {
           background: rgba(255, 255, 255, 0.08);
           border-color: rgba(255, 255, 255, 0.15);
           box-shadow:
             0 12px 48px rgba(0, 0, 0, 0.4),
             inset 0 1px 0 rgba(255, 255, 255, 0.15);
-        }
-
-        .cv-content {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 1rem;
-        }
-
-        .cv-info {
-          flex: 1;
-        }
-
-        .cv-title {
-          margin: 0;
-          color: rgba(255, 255, 255, 0.95);
-          font-size: 1rem;
-          font-weight: 700;
-        }
-
-        .cv-description {
-          margin: 0;
-          color: rgba(255, 255, 255, 0.7);
-          font-size: 0.75rem;
-        }
-
-        .cv-download-button {
-          display: flex;
-          align-items: center;
-          gap: 0.375rem;
-          padding: 0.5rem 1rem;
-
-          /* Glassmorphism button */
-          background: rgba(220, 38, 38, 0.2);
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
-
-          border: 1px solid rgba(220, 38, 38, 0.3);
-          border-radius: 10px;
-
-          color: rgba(255, 255, 255, 0.95);
-          font-size: 0.875rem;
-          font-weight: 600;
-
-          cursor: pointer;
-          transition: all 0.3s ease;
-
-          box-shadow: 0 4px 16px rgba(220, 38, 38, 0.2);
-        }
-
-        .cv-download-button:hover {
-          background: rgba(220, 38, 38, 0.3);
-          border-color: rgba(220, 38, 38, 0.5);
-          box-shadow: 0 6px 24px rgba(220, 38, 38, 0.3);
           transform: translateY(-2px);
         }
 
         .cv-icon {
           flex-shrink: 0;
-          width: 16px;
-          height: 16px;
         }
 
         .contact-icon-button {
@@ -243,27 +195,9 @@ export default function Contact() {
         }
 
         @media (max-width: 768px) {
-          .cv-download-bar {
-            padding: 1.25rem 1.5rem;
-          }
-
-          .cv-content {
-            flex-direction: column;
-            gap: 1.5rem;
-            text-align: center;
-          }
-
-          .cv-title {
-            font-size: 1.25rem;
-          }
-
-          .cv-description {
-            font-size: 0.875rem;
-          }
-
-          .cv-download-button {
-            width: 100%;
-            justify-content: center;
+          .cv-download-button-full {
+            padding: 0.875rem 1.5rem;
+            font-size: 1rem;
           }
 
           .contact-icon-wrapper {
