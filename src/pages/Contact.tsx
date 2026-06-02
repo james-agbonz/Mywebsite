@@ -67,7 +67,7 @@ export default function Contact() {
             <div className="cv-download-bar mb-12">
               <button
                 className="cv-download-button-full"
-                onClick={() => window.open('https://drive.google.com/file/d/15fePwLKDb-qgaJ3QjcYXdl8Iu3HVuoY3/view?usp=sharing', '_blank')}
+                onClick={() => window.open('https://drive.google.com/file/d/1CZOD-MNSWE_tJvTn8s7Moh2ZPXzietkv/view?usp=sharing', '_blank')}
                 aria-label="View Resume"
               >
                 <Download size={24} className="cv-icon" />
