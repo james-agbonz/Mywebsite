@@ -4,11 +4,12 @@ import StarBorder from "@/components/StarBorder"
 import GlassNav from "@/components/GlassNav"
 import Particles from "@/components/Particles"
 import profileImage from "@/assets/images/image.jpeg.png"
+import { useNavigate } from "react-router-dom"
 
 export default function Home() {
-  // The site is served from /Mywebsite/ on GitHub Pages (and / locally), so every link starts with the base path.
-  const base = import.meta.env.BASE_URL
-  const go = (path: string) => { window.location.href = `${base}${path}` }
+  // Move between pages inside the app (like the top menu does), so GitHub Pages never has to find /contact as a file.
+  const navigate = useNavigate()
+  const go = (path: string) => navigate(`/${path}`)
 
   const navItems = [
     { label: 'About', href: '/' },
@@ -39,7 +40,7 @@ export default function Home() {
         <section className="mb-24 relative min-h-[80vh] flex flex-col">
           {/* Navigation at the top */}
           <div className="flex items-center justify-between mb-12 pt-4">
-            <a href={base} className="text-2xl bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer">
+            <a href={import.meta.env.BASE_URL} className="text-2xl bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer">
               <span className="font-bold">James</span> Agbonhese
             </a>
             <GlassNav
