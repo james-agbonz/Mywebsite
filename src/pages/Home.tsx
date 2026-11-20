@@ -6,6 +6,10 @@ import Particles from "@/components/Particles"
 import profileImage from "@/assets/images/image.jpeg.png"
 
 export default function Home() {
+  // The site is served from /Mywebsite/ on GitHub Pages (and / locally), so every link starts with the base path.
+  const base = import.meta.env.BASE_URL
+  const go = (path: string) => { window.location.href = `${base}${path}` }
+
   const navItems = [
     { label: 'About', href: '/' },
     { label: 'Projects', href: '/projects' },
@@ -35,7 +39,7 @@ export default function Home() {
         <section className="mb-24 relative min-h-[80vh] flex flex-col">
           {/* Navigation at the top */}
           <div className="flex items-center justify-between mb-12 pt-4">
-            <a href="/Mywebsite/" className="text-2xl bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer">
+            <a href={base} className="text-2xl bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity cursor-pointer">
               <span className="font-bold">James</span> Agbonhese
             </a>
             <GlassNav
@@ -55,7 +59,7 @@ export default function Home() {
               handle="jamesagbonz"
               status="Available"
               contactText="Contact"
-              onContactClick={() => window.location.href = '/contact'}
+              onContactClick={() => go('contact')}
               enableTilt={true}
               behindGlowEnabled={false}
               showUserInfo={false}
@@ -84,10 +88,10 @@ export default function Home() {
 
             <div className="flex gap-4 mt-8">
               <StarBorder as="div" color="#dc2626" speed="4s">
-                <Button size="lg" onClick={() => window.location.href = '/projects'}>View Projects</Button>
+                <Button size="lg" onClick={() => go('projects')}>View Projects</Button>
               </StarBorder>
               <StarBorder as="div" color="#b91c1c" speed="5s">
-                <Button size="lg" variant="outline" onClick={() => window.location.href = '/contact'}>Contact Me</Button>
+                <Button size="lg" variant="outline" onClick={() => go('contact')}>Contact Me</Button>
               </StarBorder>
             </div>
           </div>
